@@ -1,0 +1,29 @@
+{
+    "name": "lfyw/opencrypt",
+    "description": "A crypt sdk.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lfyw",
+            "email": "1559897062@qq.com"
+        }
+    ],
+    "require": {
+        "laravel/framework": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lfyw\\Opencrypt\\": "src"
+        },
+        "files":[
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lfyw\\Opencrypt\\ServiceProvider"
+            ]
+        }
+    }
+}
