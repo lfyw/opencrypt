@@ -3,7 +3,6 @@
 namespace Lfyw\Opencrypt;
 
 use Lfyw\Opencrypt\Commands\OpencryptKeyGenerateCommand;
-use Lfyw\Opencrypt\OpencryptApplication;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
@@ -11,7 +10,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 
     public function register()
     {
-        $this->app->singleton(OpencryptApplication::class, function(){
+        $this->app->singleton(OpencryptApplication::class, function () {
             return new OpencryptApplication();
         });
 
