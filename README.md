@@ -2,6 +2,7 @@
 
 <p align="center"> A crypt sdk..</p>
 
+![StyleCI build status](https://github.styleci.io/repos/447518760/shield) 
 
 ## Installing
 
