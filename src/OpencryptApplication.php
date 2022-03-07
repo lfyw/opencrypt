@@ -14,8 +14,8 @@ use Lfyw\Opencrypt\Exceptions\MissingOpencryptKeyException;
  */
 class OpencryptApplication
 {
-    protected $publicKey; //公钥
-    protected $privateKey; //私钥
+    protected $publicKey; // 公钥
+    protected $privateKey; // 私钥
 
     public function __construct()
     {
@@ -34,7 +34,7 @@ class OpencryptApplication
      */
     public function decrypt($string, $base64Encode = true)
     {
-        //如果未开启解密或者解密密钥文件不存在，则直接返回原数据
+        // 如果未开启解密或者解密密钥文件不存在，则直接返回原数据
         if (!config('opencrypt.opencrypt') || !$this->getPrivateKey()) {
             return $string;
         }
@@ -55,7 +55,7 @@ class OpencryptApplication
      */
     public function encrypt($string, $base64Encode = true)
     {
-        //如果未开启解密或者解密密钥文件不存在，则直接返回原数据
+        // 如果未开启解密或者解密密钥文件不存在，则直接返回原数据
         if (!config('opencrypt.opencrypt') || !$this->getPublicKey()) {
             return $string;
         }

@@ -52,7 +52,7 @@ class OpencryptKeyGenerateCommand extends Command
 
             return;
         }
-        //环境变量模式：密钥保存到.env环境中；文件模式：密钥保存到文件中
+        // 环境变量模式：密钥保存到.env环境中；文件模式：密钥保存到文件中
         if ('env' === config('opencrypt.opencrypt_type')) {
             if (!$this->setKeyInEnvironmentFile($keyPairs)) {
                 return;
